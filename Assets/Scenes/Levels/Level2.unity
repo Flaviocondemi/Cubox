@@ -15689,7 +15689,6 @@ MonoBehaviour:
   textCountDown: {fileID: 462561148}
   pauseMenu: {fileID: 1467298976}
   level: L2
-  checkpointLevel: Level2
 --- !u!1 &1009270915
 GameObject:
   m_ObjectHideFlags: 0
@@ -22246,6 +22245,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1308337538940525242, guid: 7ceb842dff361e14590a1eb22fcf460a,
+        type: 3}
+      propertyPath: m_JumpForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1308337538940525246, guid: 7ceb842dff361e14590a1eb22fcf460a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22305,11 +22309,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308337538940525242, guid: 7ceb842dff361e14590a1eb22fcf460a,
-        type: 3}
-      propertyPath: m_JumpForce
-      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1308337538940525217, guid: 7ceb842dff361e14590a1eb22fcf460a,
         type: 3}
@@ -28184,6 +28183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791794500}
   - component: {fileID: 1791794501}
+  - component: {fileID: 1791794502}
   m_Layer: 5
   m_Name: SliderVolume
   m_TagString: Untagged
@@ -28271,6 +28271,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1791794502}
+        m_MethodName: saveVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1791794502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791794499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b0a12cc3a691244fac34b9c6a3828a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1794429256
 GameObject:
   m_ObjectHideFlags: 0

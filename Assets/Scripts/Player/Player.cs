@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     public Transform checkpointPosition;
     public Transform startPosition;
 
+    public delegate void onButtonClicked();
+    public event onButtonClicked butn;
+
     public string level;
 
 
@@ -61,7 +64,7 @@ public class Player : MonoBehaviour
                 //SoundManager.playSound("Hit");
                 Debug.Log("Touched");
                 if (Life.getLife() <= 1)
-                {
+                {   
                     lifeText.SetText(Life.getLife().ToString());
                     Debug.Log("Death");
                     animator.SetBool("hurted", true);

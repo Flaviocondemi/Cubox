@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FadeEffect : MonoBehaviour
 {
-    public Image blackFadeImage;
+    private Image blackFadeImage;
     private GameObject blackFadeObject;
     private Color colorAlpha;
 
@@ -16,6 +16,8 @@ public class FadeEffect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        blackFadeImage = gameObject.GetComponent<Image>();
         transparency = 1;
         isFaded = true;
         blackFadeObject = gameObject;
@@ -28,7 +30,8 @@ public class FadeEffect : MonoBehaviour
     {
         if (isFaded)
         {
-            transparency -= Time.deltaTime * 2;
+            Debug.Log(transparency);
+            transparency = transparency- Time.deltaTime * 2;
             colorAlpha = blackFadeImage.color;
             colorAlpha.a = transparency;
             blackFadeImage.color = colorAlpha;

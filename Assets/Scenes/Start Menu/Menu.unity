@@ -510,7 +510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &189008315
 RectTransform:
   m_ObjectHideFlags: 0
@@ -542,8 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfeeb9bf63b001249bfeb0025f5507ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 0
-  alertDialog: {fileID: 0}
+  scene: 6
 --- !u!114 &189008317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,7 +1212,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 5
-  alertDialog: {fileID: 0}
 --- !u!1 &944715694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,7 +1957,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 7
-  alertDialog: {fileID: 0}
 --- !u!114 &1527239095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2395,7 +2392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 1
-  alertDialog: {fileID: 0}
 --- !u!1 &1832772801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,7 +2666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02ed79965b5b454d85629ff64ad44e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackFadeImage: {fileID: 1929270387}
 --- !u!114 &1929270387
 MonoBehaviour:
   m_ObjectHideFlags: 0

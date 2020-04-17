@@ -7,8 +7,7 @@ public class PowerUp : MonoBehaviour
 {
     public TextMeshProUGUI countText;
     public  Animator anim;
-    private float currCountdownValue;
-    public float targetTime = 3.0f;
+    public float targetTime;
     public GameObject countDown;
 
 

@@ -13,6 +13,7 @@ public class GameOverPanel : MonoBehaviour
     private void OnEnable()
     {
         Score.resetScore("Score" + level);
+        Life.setPowerUp(false); //remove the immunity if you die before the timer is expired.
         TouchControlButton.resetAxisValue();
         SoundManager.playSound("GameOver");
         soudTrack.SetActive(false);

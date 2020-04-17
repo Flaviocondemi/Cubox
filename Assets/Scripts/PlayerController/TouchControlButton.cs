@@ -19,14 +19,12 @@ public class TouchControlButton : MonoBehaviour, IPointerDownHandler, IPointerUp
             move = true;
             axisValue = -1;
         }
-        throw new System.NotImplementedException();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         move = false;
         axisValue = 0;
-        throw new System.NotImplementedException();
     }
 
     public void OnMove(AxisEventData eventData)

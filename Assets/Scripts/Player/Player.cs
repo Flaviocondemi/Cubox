@@ -84,8 +84,6 @@ public class Player : MonoBehaviour
                     animator.SetBool("hurted", true);
                     StartCoroutine(hurtAnimStop());
                 }
-                //the life of the zombie decrease by one
-                //animator.SetBool("damage", true);
             }
         }
     }

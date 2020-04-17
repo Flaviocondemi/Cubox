@@ -29,16 +29,19 @@ public class Tresoure : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = new Vector2(player.position.x, player.position.y);
-        if (Vector2.Distance(transform.position, target) < stopDistance)
+        if (player != null)
         {
-            sr.sprite = sprite;
-            particleEffect.SetActive(true);
-        }
-        else
-        {
-            particleEffect.SetActive(false);
-            sr.sprite = spriteTmp;
+            target = new Vector2(player.position.x, player.position.y);
+            if (Vector2.Distance(transform.position, target) < stopDistance)
+            {
+                sr.sprite = sprite;
+                particleEffect.SetActive(true);
+            }
+            else
+            {
+                particleEffect.SetActive(false);
+                sr.sprite = spriteTmp;
+            }
         }
     }
 

@@ -37,40 +37,43 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        target = new Vector2(player.position.x, player.position.y);
-
-        /* FIRST CONDITION
-         * this condition flip the enemy according to
-         * the distance between the enemy and the player
-         */
-
-        if (target.x > transform.position.x && isFacingRight)
+        if (player != null)
         {
-            isFacingRight = !isFacingRight;
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
-        else if (target.x < transform.position.x && !isFacingRight)
-        {
-            isFacingRight = !isFacingRight;
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
+            target = new Vector2(player.position.x, player.position.y);
 
-        /* SECOND CONDITION
-         * This condition take the distance between the player
-         * and the enemy. Reached a specif "stopDistance" the enemy
-         * starts to shoot
-         */
+            /* FIRST CONDITION
+             * this condition flip the enemy according to
+             * the distance between the enemy and the player
+             */
 
-        if (Vector2.Distance(transform.position, target) < stopDistance)
-        {
-            if (timeBtwShot <= 0)
+            if (target.x > transform.position.x && isFacingRight)
             {
-                Instantiate(projectile, startPos.position, player.rotation);
-                timeBtwShot = StartTimeBtwShot;
+                isFacingRight = !isFacingRight;
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
             }
-            else
+            else if (target.x < transform.position.x && !isFacingRight)
             {
-                timeBtwShot -= Time.deltaTime;
+                isFacingRight = !isFacingRight;
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
+
+            /* SECOND CONDITION
+             * This condition take the distance between the player
+             * and the enemy. Reached a specif "stopDistance" the enemy
+             * starts to shoot
+             */
+
+            if (Vector2.Distance(transform.position, target) < stopDistance)
+            {
+                if (timeBtwShot <= 0)
+                {
+                    Instantiate(projectile, startPos.position, player.rotation);
+                    timeBtwShot = StartTimeBtwShot;
+                }
+                else
+                {
+                    timeBtwShot -= Time.deltaTime;
+                }
             }
         }
         
@@ -97,7 +100,7 @@ public class Enemy : MonoBehaviour
             if (life <= 0)
             {
                 Score.setScore("Score" + level);
-                textScore.SetText(Score.getScore(level));
+                textScore.SetText(Score.getScore("Score" + level));
                 Debug.Log("Death");
                 animator.SetBool("hurted", true);
                 Destroy(gameObject);
@@ -112,8 +115,9 @@ public class Enemy : MonoBehaviour
         }
         if (collision.gameObject.name.Equals("feet"))
         {
-            Score.setScore(level);
-            textScore.SetText(Score.getScore(level));
+            Debug.Log("feet die");
+            Score.setScore("Score" + level);
+            textScore.SetText(Score.getScore("Score" + level));
             SoundManager.playSound("Splat");
             Destroy(gameObject);
         }

@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
 
     public void loads()
     {
-
+        Life.setPowerUp(false); //if I exit from the level, the powerUp wil be removed
         SoundManager.playSound("Touch");
         SceneManager.LoadScene(scene);    
         

@@ -22,21 +22,24 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         Vector2 direction = player.position - transform.position;
-         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-
-        if (Vector2.Distance(transform.position, player.position) < stopDistance)
+        if (player != null)
         {
-            if (timeBtwShot <= 0)
+            Vector2 direction = player.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
+
+            if (Vector2.Distance(transform.position, player.position) < stopDistance)
             {
-                Instantiate(projectile, startPos.position, rotation);
-                timeBtwShot = StartTimeBtwShot;
-            }
-            else
-            {
-                timeBtwShot -= Time.deltaTime;
+                if (timeBtwShot <= 0)
+                {
+                    Instantiate(projectile, startPos.position, rotation);
+                    timeBtwShot = StartTimeBtwShot;
+                }
+                else
+                {
+                    timeBtwShot -= Time.deltaTime;
+                }
             }
         }
     }

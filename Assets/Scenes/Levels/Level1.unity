@@ -3169,7 +3169,6 @@ MonoBehaviour:
   textCountDown: {fileID: 61516476}
   pauseMenu: {fileID: 1968434387}
   level: L1
-  checkpointLevel: Level1
 --- !u!1 &179993682
 GameObject:
   m_ObjectHideFlags: 0
@@ -20752,6 +20751,7 @@ MonoBehaviour:
   soudTrack: {fileID: 1577956912}
   textCountDown: {fileID: 61516476}
   pauseMenu: {fileID: 1968434387}
+  level: Level1
 --- !u!1 &1448537127
 GameObject:
   m_ObjectHideFlags: 0
@@ -22827,6 +22827,7 @@ MonoBehaviour:
   life: 3
   animator: {fileID: 1630171829}
   lifeText: {fileID: 246150304}
+  scoreText: {fileID: 0}
   controlPanelRight: {fileID: 1428453660}
   controlPanelLeft: {fileID: 1841573753}
   checkpointPosition: {fileID: 2109653323}
@@ -31697,6 +31698,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1308337538940525242, guid: 7ceb842dff361e14590a1eb22fcf460a,
+        type: 3}
+      propertyPath: m_JumpForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1308337538940525246, guid: 7ceb842dff361e14590a1eb22fcf460a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31756,11 +31762,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308337538940525242, guid: 7ceb842dff361e14590a1eb22fcf460a,
-        type: 3}
-      propertyPath: m_JumpForce
-      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1308337538940525217, guid: 7ceb842dff361e14590a1eb22fcf460a,
         type: 3}

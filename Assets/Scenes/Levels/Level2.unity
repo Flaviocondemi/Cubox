@@ -21518,6 +21518,7 @@ MonoBehaviour:
   soudTrack: {fileID: 311800578}
   textCountDown: {fileID: 462561148}
   pauseMenu: {fileID: 1467298976}
+  level: Level2
 --- !u!1 &1386139397
 GameObject:
   m_ObjectHideFlags: 0
